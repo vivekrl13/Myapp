@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    <ImageView
+        android:id="@+id/myim"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="5dp"
+         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name" >
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center|left"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/myim"
+        android:id="@+id/movname"
+        android:layout_marginLeft="10dp"
+
+        ></TextView>
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/Ratingbar"
+        android:layout_below="@+id/movname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="10"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginLeft="10dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:gravity="center|left"
+        android:layout_below="@+id/Ratingbar"
+        android:id="@+id/lng"
+        android:layout_marginLeft="10dp"
+
+        ></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center|left"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/lng"
+        android:id="@+id/reldate"
+        android:layout_marginLeft="10dp"
+
+        ></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center|left"
+        android:scrollbars="horizontal|vertical"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/reldate"
+        android:id="@+id/modetails"
+        android:layout_marginLeft="10dp"
+
+        ></TextView>
+   <TextView
+       android:id="@+id/siml"
+       android:layout_below="@+id/modetails"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#ff0000"
+       android:textStyle="bold"
+       android:text="Similar Movies"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="5dp"
+       android:textSize="20sp"
+
+       ></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/rel"
+        android:layout_below="@+id/siml"
+        android:background="#000000"
+        ></RelativeLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:id="@+id/recycl"
+        android:layout_below="@+id/rel"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentBottom="true"
+        ></androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
